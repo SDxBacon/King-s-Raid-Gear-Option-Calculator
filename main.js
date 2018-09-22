@@ -5,7 +5,7 @@ function createNewCharacterCells () {
 
     var sDst = SpreadsheetApp.getActiveSheet(), 
         rDst = null;
-    var rSrc = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('reference').getRange("A1:S9");
+    var rSrc = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('reference').getRange("A1:Q9");
     var arr = getAllIndexes(sDst.getRange("$A:$A").getValues(), "#");
     var A1Notation = null;
 
@@ -340,8 +340,11 @@ function isPercentage(GearOption) {
         case "魔法防禦":
         case "物理防禦":
         case "最大生命":
+        case "生命值上限":
         case "回復":
         case "每秒魔力回復":
+        case "每秒魔力回復量":
+        case "受傷時魔力回復量":
         case "受傷/魔法回復量":
             return true;
         default:
